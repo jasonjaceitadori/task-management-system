@@ -24,7 +24,7 @@ def add_task(title, description, due_date):
         "created_at": datetime.now().isoformat(),
     }
     tasks.append(task)
-    return True, "Task added successfully."
+    return True, "Task added successfully!"
 
 
 def mark_task_as_complete(index, tasks_list=None):
@@ -35,7 +35,7 @@ def mark_task_as_complete(index, tasks_list=None):
     if index < 1 or index > len(tasks_list):
         return False, "Index out of range."
     tasks_list[index - 1]["completed"] = True
-    return True, "Task marked as complete."
+    return True, "Task marked as complete!"
 
 
 def view_pending_tasks(tasks_list=None):

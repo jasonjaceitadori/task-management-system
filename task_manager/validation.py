@@ -29,7 +29,4 @@ def validate_due_date(due_date):
         dt = datetime.strptime(due_date, "%Y-%m-%d").date()
     except ValueError:
         return False, "Due date must be in YYYY-MM-DD format."
-    today = datetime.now().date()
-    if dt < today:
-        return False, "Due date cannot be in the past."
     return True, ""
